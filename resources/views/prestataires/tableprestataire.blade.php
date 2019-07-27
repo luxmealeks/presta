@@ -12,7 +12,7 @@
                                     </p>
                                 </div>
                                 <div class="card-body table-full-width table-responsive">
-                                    <table class="table table-hover table-striped" id="tableprestataire">
+                                    <table class="table table-hover table-striped" id="table-prestataire">
                                         <thead>
                                             <th>ID</th>
                                             <th>NINEA</th>
@@ -80,12 +80,12 @@
                         </div>
                     </div>
                 </div>
-
 @endsection
+
 @push('scripts')
       <script type="text/javascript">
       $(document).ready(function () {
-          $('#tableprestataire').DataTable( {
+          $('#table-prestataire').DataTable( {
             "processing": true,
             "serverSide": true,
             "ajax": "{{route('prestataires.list')}}",

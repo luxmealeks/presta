@@ -20,7 +20,7 @@ Route::get('/home', function () {
 Auth::routes();
 
 Route::get('/accueil', 'HomeController@index')->name('accueil');
-
+Route::get('/profiluser', 'UserController@index')->name('profiluser');
 Route::get('/agrements/tableagrement', 'AgrementController@index')->name('agrements.tableagrement');
 Route::get('/prestataires/tableprestataire', 'PrestataireController@index')->name('prestataires.tableprestataire');
 
@@ -29,7 +29,4 @@ Route::get('/prestataires/list', 'PrestataireController@list')->name('prestatair
 
 Route::resource('/agrements', 'AgrementController');
 Route::resource('/prestataires', 'PrestataireController');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/profil', 'UserController');

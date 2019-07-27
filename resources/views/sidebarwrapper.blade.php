@@ -13,9 +13,9 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="./user.html">
+                        <a class="nav-link" href="{{route('profiluser')}}">
                             <i class="nc-icon nc-circle-09"></i>
-                            <p>User Profile</p>
+                            <p>Profil Utilisateur</p>
                         </a>
                     </li>
                       {{-- <li class="nav-item active">
