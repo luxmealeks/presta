@@ -34,6 +34,7 @@
            {{-- content à inserer --}}
            @yield ('content')
           {{-- footer --}}
+          @include('footer')
         </div>
     </div>
 

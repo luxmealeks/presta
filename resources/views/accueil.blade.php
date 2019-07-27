@@ -34,6 +34,7 @@
            {{-- content à inserer --}}
            @include ('content')
           {{-- footer --}}
+            @include('footer')
         </div>
     </div>
 
