@@ -14,7 +14,7 @@ class PrestataireController extends Controller
      */
     public function index()
     {
-        //
+        return view('prestataires.tableprestataire');
     }
 
     /**
@@ -24,62 +24,61 @@ class PrestataireController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Prestataire  $prestataire
+     * @param \App\Prestataire $prestataire
+     *
      * @return \Illuminate\Http\Response
      */
     public function show(Prestataire $prestataire)
     {
-        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Prestataire  $prestataire
+     * @param \App\Prestataire $prestataire
+     *
      * @return \Illuminate\Http\Response
      */
     public function edit(Prestataire $prestataire)
     {
-        //
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Prestataire  $prestataire
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Prestataire         $prestataire
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Prestataire $prestataire)
     {
-        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Prestataire  $prestataire
+     * @param \App\Prestataire $prestataire
+     *
      * @return \Illuminate\Http\Response
      */
     public function destroy(Prestataire $prestataire)
     {
-        //
     }
 }

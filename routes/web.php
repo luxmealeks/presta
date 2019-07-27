@@ -12,19 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('default');
+    return view('home');
 });
 Route::get('/home', function () {
-    return view('home');
+    return view('default');
 });
 Auth::routes();
 
 Route::get('/accueil', 'HomeController@index')->name('accueil');
 
 Route::get('/agrements/tableagrement', 'AgrementController@index')->name('agrements.tableagrement');
+Route::get('/prestataires/tableprestataire', 'PrestataireController@index')->name('prestataires.tableprestataire');
 
 Route::resource('agrements', 'AgrementController');
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');

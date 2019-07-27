@@ -32,7 +32,7 @@
  @include ('navbar')
             <!-- End Navbar -->
            {{-- content à inserer --}}
-           @yield ('content')
+           @include ('content')
           {{-- footer --}}
         </div>
     </div>

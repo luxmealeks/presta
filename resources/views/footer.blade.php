@@ -4,12 +4,12 @@
                         <ul class="footer-menu">
                             <li>
                                 <a href="#">
-                                    Home
+                                    Accueil
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    Company
+                                    A propos
                                 </a>
                             </li>
                             <li>
@@ -28,7 +28,7 @@
                             <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                            <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                            <a href="#">Babacar THIAM</a>, made with love for a better managing
                         </p>
                     </nav>
                 </div>

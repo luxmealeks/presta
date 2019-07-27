@@ -1,6 +1,6 @@
  <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#pablo"> Dashboard </a>
+                    <a class="navbar-brand" href="#pablo"> Tableau de bord </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -11,7 +11,7 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link" data-toggle="dropdown">
                                     <i class="nc-icon nc-palette"></i>
-                                    <span class="d-lg-none">Dashboard</span>
+                                    <span class="d-lg-none">Tableau de bord</span>
                                 </a>
                             </li>
                             <li class="dropdown nav-item">
@@ -31,14 +31,14 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nc-icon nc-zoom-split"></i>
-                                    <span class="d-lg-block">&nbsp;Search</span>
+                                    <span class="d-lg-block">&nbsp;Rechercher</span>
                                 </a>
                             </li>
                         </ul>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Account</span>
+                                    <span class="no-icon">Compte</span>
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
@@ -55,8 +55,8 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Log out</span>
+                                <a class="nav-link" href="{{route('accueil')}}>
+                                    <span class="no-icon">Quitter </span>
                                 </a>
                             </li>
                         </ul>

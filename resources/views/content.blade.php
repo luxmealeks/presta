@@ -24,7 +24,7 @@
                         <div class="col-md-8">
                             <div class="card ">
                                 <div class="card-header ">
-                                    <h4 class="card-title">Users Behavior</h4>
+                                    <h4 class="card-title">Statistiques des prestataires</h4>
                                     <p class="card-category">24 Hours performance</p>
                                 </div>
                                 <div class="card-body ">
@@ -69,7 +69,7 @@
                         <div class="col-md-6">
                             <div class="card  card-tasks">
                                 <div class="card-header ">
-                                    <h4 class="card-title">Tasks</h4>
+                                    <h4 class="card-title">Suivi des prestataires</h4>
                                     <p class="card-category">Backend development</p>
                                 </div>
                                 <div class="card-body ">
