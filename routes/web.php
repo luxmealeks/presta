@@ -12,6 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('default');
 });
-Route::get('/index', 'HomeController@index')->name('index');
+Route::get('/home', function () {
+    return view('home');
+});
+Auth::routes();
+
+Route::get('/accueil', 'HomeController@index')->name('accueil');
+
+Route::get('/agrements/tableagrement', 'AgrementController@index')->name('agrements.tableagrement');
+
+Route::resource('agrements', 'AgrementController');
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

@@ -6,11 +6,9 @@ class PrestatairesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
-        //
+        factory(App\Models\Prestataire::class, 100)->create();
     }
 }

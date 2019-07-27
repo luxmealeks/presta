@@ -6,11 +6,9 @@ class ActivitesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
-        //
+        factory(App\Models\Activite::class, 30)->create();
     }
 }

@@ -10,30 +10,27 @@ namespace App\Models;
 use Reliese\Database\Eloquent\Model as Eloquent;
 
 /**
- * Class Type
- * 
- * @property int $id
- * @property string $typePrestataire
- * @property string $uuid
- * @property string $deleted_at
- * @property \Carbon\Carbon $created_at
- * @property \Carbon\Carbon $updated_at
- * 
- * @property \Illuminate\Database\Eloquent\Collection $prestataires
+ * Class Type.
  *
- * @package App\Models
+ * @property int                                      $id
+ * @property string                                   $name
+ * @property string                                   $uuid
+ * @property string                                   $deleted_at
+ * @property \Carbon\Carbon                           $created_at
+ * @property \Carbon\Carbon                           $updated_at
+ * @property \Illuminate\Database\Eloquent\Collection $prestataires
  */
 class Type extends Eloquent
 {
-	use \Illuminate\Database\Eloquent\SoftDeletes;
+    use \Illuminate\Database\Eloquent\SoftDeletes;
 
-	protected $fillable = [
-		'typePrestataire',
-		'uuid'
-	];
+    protected $fillable = [
+        'name',
+        'uuid',
+    ];
 
-	public function prestataires()
-	{
-		return $this->hasMany(\App\Models\Prestataire::class, 'types_id');
-	}
+    public function prestataires()
+    {
+        return $this->hasMany(\App\Models\Prestataire::class, 'types_id');
+    }
 }

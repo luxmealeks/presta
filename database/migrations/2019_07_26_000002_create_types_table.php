@@ -7,23 +7,23 @@ use Illuminate\Database\Migrations\Migration;
 class CreateTypesTable extends Migration
 {
     /**
-     * Schema table name to migrate
+     * Schema table name to migrate.
+     *
      * @var string
      */
     public $tableName = 'types';
 
     /**
      * Run the migrations.
-     * @table types
      *
-     * @return void
+     * @table types
      */
     public function up()
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('typePrestataire', 45)->nullable();
+            $table->string('name', 45)->nullable();
             $table->char('uuid', 36);
             $table->softDeletes();
             $table->nullableTimestamps();
@@ -32,11 +32,9 @@ class CreateTypesTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-     public function down()
-     {
-       Schema::dropIfExists($this->tableName);
-     }
+    public function down()
+    {
+        Schema::dropIfExists($this->tableName);
+    }
 }

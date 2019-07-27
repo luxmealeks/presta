@@ -1,12 +1,13 @@
  <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="http://www.creative-tim.com" class="simple-text">
-                        Creative Tim
+                        PRESTA BASE
                     </a>
                 </div>
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link"  href="{{route('index')}}">
+                        {{-- <a class="nav-link"  href="#"> --}}
+                     <a class="nav-link"  href="{{route('acceuil')}}">
                             <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Dashboard</p>
                         </a>
@@ -17,18 +18,27 @@
                             <p>User Profile</p>
                         </a>
                     </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="./typography.html">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>GESTION AGREMENTS</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        {{-- <a class="nav-link" href="#"> --}}
+                   <a class="nav-link" href="{{route('agrements.tableagrement')}}">
+
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Liste Agréments</p>
+                        </a>
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="./table.html">
                             <i class="nc-icon nc-notes"></i>
                             <p>Liste Prestataires</p>
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./typography.html">
-                            <i class="nc-icon nc-paper-2"></i>
-                            <p>Typography</p>
-                        </a>
-                    </li>
+
                     <li class="nav-item active">
                         <a class="nav-link" href="./icons.html">
                             <i class="nc-icon nc-atom"></i>

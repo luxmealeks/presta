@@ -9,6 +9,6 @@ class AgrementsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Agrement::class, 100)->create();
+        factory(App\Models\Agrement::class, 100)->create();
     }
 }
