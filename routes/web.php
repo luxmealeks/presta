@@ -24,4 +24,12 @@ Route::get('/accueil', 'HomeController@index')->name('accueil');
 Route::get('/agrements/tableagrement', 'AgrementController@index')->name('agrements.tableagrement');
 Route::get('/prestataires/tableprestataire', 'PrestataireController@index')->name('prestataires.tableprestataire');
 
-Route::resource('agrements', 'AgrementController');
+Route::get('/prestataires/createprestataire', 'PrestataireController@create')->name('prestataires.createprestataire');
+Route::get('/prestataires/list', 'PrestataireController@list')->name('prestataires.list');
+
+Route::resource('/agrements', 'AgrementController');
+Route::resource('/prestataires', 'PrestataireController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

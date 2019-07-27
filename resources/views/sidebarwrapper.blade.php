@@ -18,26 +18,27 @@
                             <p>User Profile</p>
                         </a>
                     </li>
-                      <li class="nav-item active">
+                      {{-- <li class="nav-item active">
                         <a class="nav-link" href="./typography.html">
                             <i class="nc-icon nc-paper-2"></i>
                             <p>GESTION AGREMENTS</p>
                         </a>
+                    </li> --}}
+                     <li class="nav-item active">
+                        <a class="nav-link" href="{{route('prestataires.tableprestataire')}}">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Prestataires</p>
+                        </a>
                     </li>
                     <li class="nav-item active">
                         {{-- <a class="nav-link" href="#"> --}}
-                   <a class="nav-link" href="{{route('agrements.tableagrement')}}">
+                        <a class="nav-link" href="{{route('agrements.tableagrement')}}">
 
                             <i class="nc-icon nc-notes"></i>
-                            <p>Liste Agréments</p>
+                            <p>Agréments</p>
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{route('prestataires.tableprestataire')}}">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>Liste Prestataires</p>
-                        </a>
-                    </li>
+
 
                     <li class="nav-item active">
                         <a class="nav-link" href="./icons.html">

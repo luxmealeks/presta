@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Prestataire;
+use App\Models\Prestataire;
 use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
 
 class PrestataireController extends Controller
 {
+    public function list(Request $request)
+    {
+        // $prestataire = Prestataire::with('type')->get();
+        $prestataire = Prestataire::get();
+
+        return Datatables::of($prestataire)->make(true);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -22,8 +31,9 @@ class PrestataireController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        return view('prestataires.createprestataire');
     }
 
     /**
@@ -35,6 +45,18 @@ class PrestataireController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate(
+            $request, [
+                'ninea' => 'required|string|max:50',
+                'bp' => 'required|string|max:50',
+                'telephone' => 'required|max:30|unique:prestataires,telephone',
+                'email' => 'required|email|max:255|unique:prestataires,email',
+                'registreCommerce' => 'required|string|max:50',
+                'raisonSociale' => 'required|string|max:50',
+            ]
+        );
+
+        return view('prestataires.tableprestataire');
     }
 
     /**
@@ -57,6 +79,16 @@ class PrestataireController extends Controller
      */
     public function edit(Prestataire $prestataire)
     {
+        $prestataire = Prestataire::find($id);
+        // $user = $prestataire->user;
+
+        // return $user; //on le fait pour tester ce qu'il retourne.
+
+        $message = 'modifier'.$prestataire->raisonSociale.'Edition effectuée';
+
+        // return redirect()->route('prestataires.edit')->with(compact('message'));
+
+        return view('layout.prestataires.edit')->with(compact('prestataire', 'id'));
     }
 
     /**
@@ -69,6 +101,7 @@ class PrestataireController extends Controller
      */
     public function update(Request $request, Prestataire $prestataire)
     {
+        return view('layout.prestataires.update')->with(compact('prestataire', 'id'));
     }
 
     /**
@@ -80,5 +113,10 @@ class PrestataireController extends Controller
      */
     public function destroy(Prestataire $prestataire)
     {
+        $prestataire = Prestataire::find($id);
+        $prestataire->delete();
+        $message = $prestataire->raisonSociale.' a été supprimé(e)';
+
+        return redirect()->route('prestataires.index')->with(compact('message'));
     }
 }
