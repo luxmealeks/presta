@@ -2,10 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agrement;
 use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
 
 class AgrementController extends Controller
 {
+    public function list(Request $request)
+    {
+        // $agrement = Agrement::with('type')->get();
+        $agrement = Agrement::get();
+
+        return Datatables::of($agrement)->make(true);
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -20,7 +20,9 @@
                                             <th>N°RC</th>
                                             <th>Raison sociale</th>
                                             <th>Tel</th>
+                                             <th>BP</th>
                                             <th>E-mail</th>
+
                                             <th>Action</th>
 
                                         </thead>
@@ -50,6 +52,7 @@
                 { data: 'raisonSociale', name: 'raisonSociale' },
                 { data: 'registreCommerce', name: 'registreCommerce' },
                 { data: 'telephone', name: 'telephone' },
+                { data: 'bp', name: 'bp' },
                 { data: 'email', name: 'email' },
                 { data: null ,orderable: false, searchable: false}
 
@@ -63,7 +66,7 @@
                         return '<a href='+url_e+'  class="btn btn-primary" ><i class="material-icons">edit</i></a>'+
                         '<div class="btn btn-danger delete btn-delete-client" data-href='+url_d+'><i class="material-icons">delete</i></div>';
                         },
-                        "targets": 6
+                        "targets": 7
                         },
                     // {
                     //     "data": null,

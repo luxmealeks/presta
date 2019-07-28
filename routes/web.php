@@ -25,6 +25,8 @@ Route::get('/agrements/tableagrement', 'AgrementController@index')->name('agreme
 Route::get('/prestataires/tableprestataire', 'PrestataireController@index')->name('prestataires.tableprestataire');
 
 Route::get('/prestataires/createprestataire', 'PrestataireController@create')->name('prestataires.createprestataire');
+Route::get('/agrements/list', 'AgrementController@list')->name('agrements.list');
+
 Route::get('/prestataires/list', 'PrestataireController@list')->name('prestataires.list');
 
 Route::resource('/agrements', 'AgrementController');

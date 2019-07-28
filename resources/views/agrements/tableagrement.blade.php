@@ -10,50 +10,16 @@
                                     <p class="card-category">Here is a subtitle for this table</p>
                                 </div>
                                 <div class="card-body table-full-width table-responsive">
-                                    <table class="table table-hover table-striped">
+                                    <table class="table table-hover table-striped" id="table-agrement">
                                         <thead>
                                             <th>ID</th>
                                             <th>Références</th>
                                             <th>Classe d'agrément</th>
                                             <th>Date d'enregistrement</th>
+                                             <th>Action</th>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Dakota Rice</td>
-                                                <td>$36,738</td>
-                                                <td>Niger</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Minerva Hooper</td>
-                                                <td>$23,789</td>
-                                                <td>Curaçao</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Sage Rodriguez</td>
-                                                <td>$56,142</td>
-                                                <td>Netherlands</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Philip Chaney</td>
-                                                <td>$38,735</td>
-                                                <td>Korea, South</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Doris Greene</td>
-                                                <td>$63,542</td>
-                                                <td>Malawi</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Mason Porter</td>
-                                                <td>$78,615</td>
-                                                <td>Chile</td>
-                                            </tr>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -64,3 +30,50 @@
                 </div>
             </div>
 @endsection
+
+@push('scripts')
+      <script type="text/javascript">
+      $(document).ready(function () {
+          $('#table-agrement').DataTable( {
+            "processing": true,
+            "serverSide": true,
+            "ajax": "{{route('agrements.list')}}",
+            columns: [
+                { data: 'id', name: 'id' },
+                { data: 'reference', name: 'reference' },
+                { data: 'classe', name: 'classe' },
+                { data: 'created_at', name: 'created_at' },
+
+                { data: null ,orderable: false, searchable: false}
+
+                ],
+                "columnDefs": [
+                        {
+                        "data": null,
+                        "render": function (data, type, row) {
+                        url_e =  "{!! route('agrements.edit',':id')!!}".replace(':id', data.id);
+                        url_d =  "{!! route('agrements.destroy',':id')!!}".replace(':id', data.id);
+                        return '<a href='+url_e+'  class="btn btn-primary" ><i class="material-icons">edit</i></a>'+
+                        '<div class="btn btn-danger delete btn-delete-client" data-href='+url_d+'><i class="material-icons">delete</i></div>';
+                        },
+                        "targets": 4
+                        },
+                    // {
+                    //     "data": null,
+                    //     "render": function (data, type, row) {
+                    //         url =  "{!! route('agrements.edit',':id')!!}".replace(':id', data.id);
+                    //         return check_status(data,url);
+                    //     },
+                    //     "targets": 1
+                    // }
+                ],
+                  dom: 'lBfrtip',
+                buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
+                "lengthMenu": [ 10, 25, 50, 75, 100 ]
+
+          });
+      });
+      </script>
+      @endpush
