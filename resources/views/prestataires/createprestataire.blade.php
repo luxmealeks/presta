@@ -5,8 +5,10 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card">
+
                                 <div class="card-header">
                                     <h4 class="card-title">Enregistrement d'un nouveau prestataire</h4>
+
                                 </div>
                                 <div class="card-body">
                                     <form>
@@ -63,6 +65,10 @@
                                         </div>
 
                                         <button type="submit" class="btn btn-info btn-fill pull-right">Enregistrer</button>
+
+                                           <p
+                                    <a href="{{route('prestataires.createprestataire')}}">   <button type="submit" class="btn btn-info btn-fill pull-right">Joindre document</button></a>
+                                    </p>
                                         <div class="clearfix"></div>
                                     </form>
                                 </div>
